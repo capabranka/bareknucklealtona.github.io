@@ -109,8 +109,6 @@ body {
 .topnav .NavLinks li {
   position: relative;
   text-align: center;
-  padding: 100% 0px;
-  background: green;
 }
 
 .topnav .NavLinks li a {
