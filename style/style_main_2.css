@@ -198,13 +198,12 @@ main section .section__header h2 {
 
 main section .section__content {
   padding: 5px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.8rem;
   text-align: center;
 }
 
 main section .section__content p {
-  max-width: 80%;
   margin: 10px auto 10px;
 }
 
