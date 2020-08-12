@@ -84,9 +84,6 @@ $breakpoints:(
 html{
     font-size: 62.5%;
 }
-body, html {
-    height: 100%;
-}
 
 body{
     background-color: bkaColor(background_primary);
@@ -271,22 +268,21 @@ main{
             }
         }
         .section__content{
-            padding: 5px;
-            //border: 2px  solid bkaColor(background_secondary);
-            // border-width: 0px 2px 2px 2px;
             font-weight: 400;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             text-align: center;
+
+            padding: 5px;
+
             p{
-                //max-width: 80%;
                 margin: 10px auto 10px;
             }
             img{
+               
                 max-width: 80%;
                 display: block;
-                margin: 0 auto;
+                margin: 0px auto  10px;
             }
-
         }
 
         .section-strong{
