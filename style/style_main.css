@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.strong1 {
+  color: red;
+}
+
+header {
+  /* mobile */
+}
+
+header .topline {
+  background-color: #1a2635;
+  text-align: center;
+  color: #FAFFF3;
+  font-size: 1.8em;
+  margin: 0 auto 5px;
+}
+
+header #main_logo {
+  text-align: center;
+}
+
+header #main_logo img {
+  width: 100%;
+  max-width: 500px;
+}
+
+header nav ul {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  font-size: 1.3em;
+  color: #7D0300;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .topnav {
+  background-color: #1a2635;
+  position: relative;
+  margin: 0 0 2px;
+  overflow: hidden;
+  /* burger icon */
+}
+
+header .topnav #burgerNavLinks {
+  display: none;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+header .topnav a {
+  display: block;
+  padding: 5px 16px;
+  color: #FAFFF3;
+  text-decoration: none;
+}
+
+header .topnav .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.7em;
+}
+
+header .topnav a:hover {
+  background-color: #ddd;
+  color: #1a2635;
+}
+
+@media (min-width: 768px) {
+  main .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+        grid-template-areas: "mid side";
+  }
+}
+
+main section {
+  margin: 0 0 40px;
+}
+
+main section .section__header {
+  background-color: #1a2635;
+  color: #FAFFF3;
+  text-align: center;
+}
+
+main section .section__content {
+  padding: 5px;
+  text-align: center;
+}
+
+main section h1, main section h2 {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  main #mid {
+    grid-area: mid;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 30px;
+  }
+  main #side {
+    grid-area: side;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    vertical-align: top;
+    color: red;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1em 2em;
+  background-color: #1a2635;
+  color: #FAFFF3;
+}
+
+footer #footer_logo {
+  margin: 1.5em 0;
+  width: 10em;
+}
+
+footer .msm_nav {
+  /* align al little left to centralize */
+  margin-left: -2em;
+}
+
+footer .msm_nav ul li {
+  display: inline;
+  /* spacing */
+  margin-right: .5em;
+}
+
+footer .msm_nav .msm-nav-icon img {
+  width: 3.2em;
+  /* make the icons stand out from the dark background; invert the colors from black to white */
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+footer .impressum {
+  font-size: .9em;
+  margin: 2.5em 0;
+}
+
+@media (max-width: 767px) {
+  .widescreen {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=style_main.css.map */

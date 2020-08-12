@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bareknuckle Altona</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../style/style_main.css' />
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div id="debug"></div>
+    <header>
+        <!-- Top Navigation Menu -->
+        <div class="topnav mobile">
+            <div class="topline">FGC HAMBURG</div>
+            <!-- Navigation links (hidden by default) -->
+            <div id="burgerNavLinks">
+                <a href="#home">Home</a>
+                <a href="#weekly">Weekly</a>
+                <a href="#event">Event</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="toggleBurgerNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="container">
+            <div class="topline desktop">
+                FGC HAMBURG
+            </div>
+            
+            <div id="logo">
+                <div id="main_logo">
+                    <!-- <img src="../gfx/bka_logo_asset_mobile.png"  id="main_img"/> -->
+                    <img src="../gfx/asset 27.svg"  id="main_img" alt="Logo BKA"/>
+                </div>
+            </div>
+            
+            <!-- older version, works with main.scss-->
+            <!-- <nav>
+                <div class="navlink"><a href="#event">Event</a></div>
+                <div class="navlink"><a href="#weekly">Weekly Local</a></div>
+                <div class="navlink"><a href="#footer">Kontakt</a></div>
+            </nav> -->
+            <nav class="desktop">
+                <hr>
+                <ul>
+                    <li><a href="#event">Event</a></li>
+                    <li><a href="#weekly">Weekly Local</a></li>
+                    <li><a href="#footer">Kontakt</a></li>
+                </ul>
+                <hr>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id=mid> 
+                <section id="weekly">
+                    <div class="section__header">    
+                        <h1>Weekly Local</h1>
+                        <h2>* Wöchentliches FGC Treffen *</h2>
+                    </div>
+                    
+                    <div class="section__content">
+                    Jeden Dienstag // <span class="strong1">Beginn:</span> 18:00 
+                    </div>
+                    
+                    <div class="section__content">
+                        <span class="strong1">!!! Achtung !!!</span><br> Aufgrund der aktuellen Corona Situation ist die Teilnahme am Local nur nach direkter Anmeldung über unseren Discord (im thread "#weekly-monthly-sessions") möglich.<br>
+                        FGCHamburg Discord:   <a href="https://discord.gg/739PcJ2">https://discord.gg/739PcJ2</a>
+                    </div>
+                    <div class="section__content">
+                        <span class="strong1">Adresse:</span> Kulturladen Hamm, Sievekingdamm 3.<br><br>
+                        <iframe id="adress__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.0617368153717!2d10.041070715941375!3d53.55666538002363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18ebcffd126a1%3A0x4fa9ed18dfb156bf!2sSievekingdamm%203%2C%2020535%20Hamburg!5e0!3m2!1sde!2sde!4v1593958707733!5m2!1sde!2sde"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <!-- <div class="section__content">
+                        <span class="strong1">Livestream</span> auf <a href="https://www.twitch.tv/bareknucklealtona">twitch.tv/bareknucklealtona</a><br>
+                        <img src="../gfx/stream_bsp.jpg"/>
+                    </div> -->
+                </section>
+                <section id="event" class="mid">
+                    <div class="section__header">   
+                    
+                        <h1>BKA 2020</h1>
+                        <h2>* Hamburgs FGC Event *</h2>
+                    </div>
+                    <div class="section__content">
+                        Aufgrund der Corona Situation liegen grössere Events momentan auf unbestimmte Zeit auf Eis.<br>
+                        <span class="strong1">Bleibt gesund!</span>
+                    </div>
+                </section>
+            </div> 
+            <div id="side" class="widescreen">
+                <section class="side widescreen">
+                    <div class="section__header">
+                        <h1>
+                            Header
+                        </h1>
+                    </div>
+                    <div class="section__content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptas quas saepe provident, ratione illo distinctio exercitationem error maxime obcaecati corrupti in? 
+                    </div>
+                </section>
+                <section class="side widescreen">
+                    <div class="section__header">
+                        <h1>
+                            Header
+                        </h1>
+                    </div>
+                    <div class="section__content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptas quas saepe provident, ratione illo distinctio exercitationem error maxime obcaecati corrupti in? 
+                    </div>
+                </section>
+                <section class="side widescreen">
+                    <div class="section__header">
+                        <h1>
+                            Header
+                        </h1>
+                    </div>
+                    <div class="section__content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptas quas saepe provident, ratione illo distinctio exercitationem error maxime obcaecati corrupti in? 
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>    
+    
+
+    <footer>
+        <img id="footer_logo" src="../gfx/bka_logo_asset_mobile.png" />
+        <nav class="msm_nav">
+            <ul>
+                <li><a class="icon-twitter msm-nav-icon" href="#"><img src="../gfx/icons/twitter.svg" alt="Twitter" /></a></li>
+                <li><a class="icon-twitch msm-nav-icon" href="#"><img src="../gfx/icons/twitch.svg" alt="Twitch" /></a></li>
+                <li><a class="icon-discord msm-nav-icon" href="#"><img src="../gfx/icons/discord.svg" alt="Discord" /></a></li>
+                <li><a class="icon-youtube msm-nav-icon" href="#"><img src="../gfx/icons/youtube.svg" alt="Youtube" /></a></li>
+                <li><a class="icon-facebook msm-nav-icon" href="#"><img src="../gfx/icons/facebook.svg" alt="Facebook" /></a></li>
+            </ul>
+        </nav>
+        <p class="impressum">Impressum</p>
+    </footer>
+
+
+    <script>
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function toggleBurgerNav() {
+            var x = document.getElementById("burgerNavLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        } 
+    </script>
+
+    <script>
+        // window.addEventListener("resize", function(event){
+        //     var field = document.getElementById("debug");
+        //     field.innerHTML = 'document.body.ClientWidth: ' + document.body.clientWidth + '    ' + 'document.body.OffsetWidth: ' + document.body.offsetWidth;
+        //     field.innerHTML += '<br>';
+        //     field.innerHTML += 'window.innerWidth: ' + window.innerWidth + '    ' + 'window.outerWidth: ' + window.outerWidth;
+        // });
+    </script>
+</body>
+</html>

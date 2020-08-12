@@ -1,0 +1,330 @@
+/* definition of desktop */
+/* definition of mobile */
+/* definition of large widescreens */
+/* definition of not large widescreens */
+/* put mobile only rules here */
+@media (max-width: 566px) {
+  .desktop {
+    display: none;
+  }
+}
+
+/* put desktop switch rules here */
+@media (min-width: 567px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* put widescreen switch rules here*/
+@media (max-width: 991px) {
+  .widescreen {
+    display: none;
+  }
+}
+
+/* ===   COLORS   === */
+body {
+  color: #1a2635;
+  background-color: #F2EECA;
+}
+
+body .strong1 {
+  color: #7D0300;
+}
+
+body hr {
+  border-color: #1a2635;
+}
+
+body header .topline {
+  color: #FAFFF3;
+  background-color: #1a2635;
+}
+
+body header nav .navlink a {
+  color: #7D0300;
+}
+
+body main h1, body main h2 {
+  color: #FAFFF3;
+}
+
+body main .section__header {
+  background-color: #1a2635;
+}
+
+body main .section__content {
+  background-color: #F2EECA;
+  border-color: #1a2635;
+}
+
+body footer {
+  background-color: #1a2635;
+  color: #FAFFF3;
+}
+
+body footer .impressum {
+  font-size: .9em;
+}
+
+/* ===   END/COLORS   === */
+/* ===   GENERAL   === */
+/* = STRUCTURE = */
+body {
+  font-family: Franklin Gothic, sans-serif;
+  background-image: url("../gfx/sprinkles_2.png");
+  margin: 0;
+  padding: 0;
+  /* Testing */
+}
+
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body header .topline {
+  margin: 0 auto 2px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body header hr {
+  margin: 0px;
+  border-top: 1px solid #DCDCDC;
+}
+
+body header #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header #logo #main_logo {
+  padding: 0;
+}
+
+body header #logo #main_logo #main_img {
+  width: 100%;
+  max-width: 576px;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main #middle section {
+  margin: 20px 10px 20px 0px;
+  padding: 0;
+  border: 5px solid #7D0300;
+}
+
+body main #middle section :last-child {
+  border-width: 3px 0px 0px 0px;
+}
+
+body main #middle section .section__header h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+body main #middle section .section__header h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body main #middle section .section__content {
+  border-style: solid;
+  border-width: 3px 0px 0px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+body main #middle section .section__content img {
+  width: 400px;
+  height: 300px;
+  margin: 10px auto;
+}
+
+body main #middle #adress__map {
+  width: 400px;
+  height: 200px;
+}
+
+body main aside {
+  margin: 20px 0px 20px 10px;
+  padding: 0;
+  width: 350px;
+  border: 5px solid green;
+}
+
+body .footer_variant_1 {
+  display: none;
+}
+
+body footer {
+  /* ???? */
+  text-align: center;
+  padding: 1em 2em;
+}
+
+body footer #footer_logo {
+  margin: 1.5em 0;
+  width: 10em;
+}
+
+body footer .msm_nav {
+  /* align al little left to centralize */
+  margin-left: -2em;
+}
+
+body footer .msm_nav ul li {
+  display: inline;
+  /* spacing */
+  margin-right: .5em;
+}
+
+body footer .msm_nav .msm-nav-icon img {
+  width: 3.2em;
+  /* make the icons stand out from the dark background; invert the colors from black to white */
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+body footer .impressum {
+  margin: 2.5em 0;
+}
+
+/* = END /STRUCTURE = */
+/* = Fontsizes =*/
+body header .topline {
+  font-size: 35px;
+  /* factor ~16 */
+  font-size: 2.2em;
+}
+
+body header nav .navlink a {
+  font-size: 30px;
+  font-size: 1.87em;
+  font-weight: bold;
+}
+
+body main {
+  font-size: 20px;
+  font-size: 1.25em;
+}
+
+body main h1 {
+  line-height: 70px;
+  font-size: 70px;
+  /* factor 20 */
+  font-size: 3.5em;
+}
+
+body main h2 {
+  font-size: 25px;
+}
+
+/* = END /FONTSIZES =*/
+/* === END /GENERAL === */
+@media (min-width: 1200px) {
+  body main #middle section {
+    margin-left: 0;
+    /* width of the mainsection consists of the viewportwidth*containerwidth*desired_mainsectionwidth% */
+    width: 756px;
+    border: 5px solid green;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  body .container #logo #main_logo #main_img {
+    max-width: 576px;
+  }
+  body main #middle section {
+    /* at large designs push the sections to the left of the screen  */
+    margin-left: 0;
+    /* width of the mainsection consists of the viewportwidth*containerwidth*desired_mainsectionwidth% */
+    width: 624.96px;
+    border: 5px solid yellow;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #main_img {
+    max-width: 576px;
+  }
+  body main #middle section {
+    border: 5px solid blue;
+  }
+}
+
+@media (min-width: 567px) and (max-width: 767px) {
+  #main_img {
+    max-width: 576px;
+  }
+  body main #middle section {
+    border: 5px solid white;
+  }
+}
+
+/* Mobile sized screens */
+@media (max-width: 566px) {
+  /* General structure */
+  body header .topnav {
+    overflow: hidden;
+    position: relative;
+    background-color: #1a2635;
+    margin: 0 0 2px;
+  }
+  body header .topnav #burgerNavLinks {
+    display: none;
+    float: right;
+    /* Only on mobile devices so the font size is being kept here*/
+    font-size: 1.2em;
+    text-align: right;
+  }
+  body header .topnav a {
+    color: #FAFFF3;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  body header .topnav .icon {
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+    display: block;
+    /* Only on mobile devices so the font size is being kept here*/
+    font-size: 1.7em;
+  }
+  body header .topnav a:hover {
+    background-color: #ddd;
+    color: #1a2635;
+  }
+  body main #adress__map {
+    width: 400px;
+    height: 200px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

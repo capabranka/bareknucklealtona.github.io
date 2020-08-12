@@ -1,0 +1,560 @@
+$colorscheme: (
+    background_primary: #F2EECA,
+    background_secondary: #1a2635, //#2F3627,
+    background_third: #1a2635,
+    font: #1a2635,  //#2F3627,
+    font_secondary: #FAFFF3,
+    font_third: #7D0300,
+    link: #7D0300
+);
+
+@function bkaColor($color){
+    @return map-get($colorscheme, $color);
+}
+
+
+$breakpoints:(
+    // Small tablets and large smartphones (landscape view)
+    screen-sm-min: 567px,
+    // Small tablets (portrait view)
+    screen-m-min: 768px,
+    // Tablets and small desktops
+    screen-lg-min: 992px,
+    // Large tablets and desktops
+    screen-xl-min: 1200px
+);
+
+@function screenSize($screentype){
+    @return map-get($breakpoints, $screentype);
+}
+
+/* definition of desktop */
+@mixin desktop{
+    @media(min-width: screenSize(screen-sm-min)){
+        @content;
+    }
+}
+
+/* definition of mobile */
+@mixin mobile{
+    @media(max-width: screenSize(screen-sm-min)-1){
+        @content;
+    }
+}
+
+/* definition of large widescreens */
+@mixin widescreen{
+    @media(min-width: screenSize(screen-lg-min)){
+        @content;
+    }
+}
+
+/* definition of not large widescreens */
+@mixin narrowscreen{
+    @media(max-width: screenSize(screen-lg-min)-1){
+        @content;
+    }
+}
+
+
+
+@mixin footer1(){
+    font-weight: lighter;
+    //text-align: center;
+    padding: 1em 2em;
+    
+
+    #footer_logo{
+        margin: 1.1em 4em 0 0;
+
+        float: right;
+
+        width: 10em;
+    }  
+
+    .msm_nav{
+        text-align: left;
+        /* align al little left to centralize */
+        margin-left: -2em;
+
+        ul{
+            list-style-type: none;
+            
+            li{
+                //display: inline;
+
+                /* closer spacing */
+                margin-right: .5em;            
+            }
+        }
+
+        .msm-nav-icon img{
+            //width: 3.2em;
+            width: 1.9em;
+
+            /* make the icons stand out from the dark background; invert the colors from black to white */
+            -webkit-filter: invert(1);
+            filter: invert(1);
+
+            /* Bringing the icons in line with the text*/
+            margin-bottom: -.3em;  
+            /* space between the elements*/
+            margin-top: .5em;
+        }   
+    }
+
+    .impressum{
+        font-size: .9em;
+
+        margin: 2.5em .7em 0;
+    }
+}
+
+@mixin footer2(){
+    /* ???? */
+    
+    text-align: center;
+    padding: 1em 2em;
+    
+
+    #footer_logo{
+        margin: 1.5em 0;
+        width: 10em;
+    }  
+
+    .msm_nav{
+        /* align al little left to centralize */
+        margin-left: -2em;
+        
+        ul{            
+            li{
+                display: inline;
+
+                /* spacing */
+                margin-right: .5em;       
+            }
+        }
+
+        .msm-nav-icon img{
+            width: 3.2em;
+            /* make the icons stand out from the dark background; invert the colors from black to white */
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }   
+    }
+
+    .impressum{
+        
+        margin: 2.5em 0;
+    }
+}
+
+
+/* put mobile only rules here */
+@include mobile{
+    .desktop{
+        display: none;
+    }
+}
+/* put desktop switch rules here */
+@include desktop{
+    .mobile{
+        display: none;
+    }
+}
+/* put widescreen switch rules here*/
+@include widescreen{
+}
+
+@include narrowscreen{
+    .widescreen{
+        display: none;
+    }
+}
+
+
+
+/* ===   COLORS   === */
+body{
+    //Main Text Color
+    color: bkaColor(font);
+
+    //Emphasized Text Color
+    .strong1{ color: bkaColor(font_third); }
+
+    //Main Background Color
+    background-color: bkaColor(background_primary);
+
+    //LineColor hr
+    hr{border-color: bkaColor(background_secondary);}
+
+    
+
+    header{
+        .topline{
+            color: bkaColor(font_secondary);
+            background-color: bkaColor(font);
+        }
+        nav{
+            // Navigation Link Color
+            .navlink{a{ color: bkaColor(font_third); }}
+        }
+    }
+    main{
+        //Headline Color
+        h1, h2{
+            color: bkaColor(font_secondary);
+        }    
+        
+        .section__header{
+            background-color: bkaColor(background_secondary);
+        }
+        .section__content{
+            background-color: bkaColor(background_primary);
+            border-color: bkaColor(background_secondary);
+        }
+    }
+
+    footer{  
+        background-color: bkaColor(background_secondary);
+        color: bkaColor(font_secondary);
+        .impressum{
+            font-size: .9em;
+        }
+    }
+}
+/* ===   END/COLORS   === */
+
+
+/* ===   GENERAL   === */
+/* = STRUCTURE = */
+body{
+    font-family:  Franklin Gothic, sans-serif;
+    background-image: url("../gfx/sprinkles_2.png");
+    margin: 0;
+    padding: 0;
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    
+    header{
+
+        .topline{
+            margin: 0 auto 2px;
+        
+            font-weight: bold;
+            text-align: center;
+        }
+        hr{
+            margin: 0px;
+            border-top: 1px solid #DCDCDC; 
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+            
+            #main_logo{
+                padding: 0;
+                #main_img{
+                    width: 100%;
+
+                    $var: 640px * 0.9;
+                    max-width: $var;
+                    
+                }
+            }
+        }
+        
+       
+        nav{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+   
+        main{
+            display: flex;
+            justify-content: space-between;
+            #middle{
+                section{
+                    margin: 20px 10px 20px 0px;
+                    padding: 0;
+                    //???
+                    :last-child{
+                        border-width: 3px 0px 0px 0px;
+                    }
+
+                    border: 5px solid bkaColor(font_third);
+
+                    .section__header{
+                        h1{
+                            margin: 0;
+                            padding: 0;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                        h2{
+                            margin: 0;
+                            padding: 0;
+                            text-align: center;
+                        }
+                    }
+
+                    .section__content{
+            
+                        border-style: solid;
+                        border-width: 3px 0px 0px;
+                        
+                        padding: 10px 5px;
+                        text-align: center;
+                
+                        //Platzhalter Bild
+                        img{
+                            width: 400px;
+                            height: 300px;
+                            margin: 10px auto;
+                        }
+                    }
+                }
+
+                #adress__map{
+                    width: 400px;
+                    height: 200px;
+                }
+                
+            }
+            aside{
+                margin: 20px 0px 20px 10px;
+                padding: 0;
+                width: 350px;
+                border: 5px solid green;
+            }
+        }
+
+        
+    
+
+
+    /* Testing */
+    .footer_variant_1{
+        display: none;
+    }
+    footer{
+        @include footer2();
+        
+    }
+}
+/* = END /STRUCTURE = */
+/* = Fontsizes =*/
+body{
+    header{
+        .topline{
+            font-size: 35px;
+            /* factor ~16 */
+            font-size: 2.2em;
+           // font-size: 6vw;
+        }
+        nav{
+            .navlink{
+                a{
+                    font-size: 30px; 
+                    font-size: 1.87em;
+
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    main{
+        //font-size: 3.8vw;
+        font-size: 20px;
+        font-size: 1.25em;
+        h1{  
+            line-height: 70px;
+           // line-height: 4.37em;
+
+            font-size: 70px;
+            /* factor 20 */
+            font-size: 3.5em;
+        }
+        h2{ font-size: 25px;
+           // font-size: 4vw;
+        }
+    }
+}
+/* = END /FONTSIZES =*/
+/* === END /GENERAL === */
+
+
+@media(min-width: screenSize(screen-xl-min)){
+    body{
+        main{
+            #middle{
+                section{
+                    margin-left: 0;
+
+                    /* width of the mainsection consists of the viewportwidth*containerwidth*desired_mainsectionwidth% */
+                    $calc: screenSize(screen-xl-min) * 0.9 * 0.7;
+                    width: $calc;
+
+
+                    border: 5px solid green;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: screenSize(screen-lg-min)) and (max-width: screenSize(screen-xl-min)-1){
+    body{
+        .container{
+            #logo{
+                // justify-content: space-between;
+                #main_logo{
+                    #main_img{
+                        $var: 640px * 0.9;
+                        max-width: $var;
+                    }
+                }
+            }
+        }
+        main{
+            #middle{
+                section{
+                    /* at large designs push the sections to the left of the screen  */
+                    margin-left: 0;
+
+                    /* width of the mainsection consists of the viewportwidth*containerwidth*desired_mainsectionwidth% */
+                    $calc: screenSize(screen-lg-min) * 0.9 * 0.7;
+                    width: $calc;
+
+                    border: 5px solid yellow;
+                }
+            }
+        }
+    }
+
+
+    
+}
+
+
+@media(min-width: screenSize(screen-m-min)) and (max-width: screenSize(screen-lg-min)-1){
+    #main_img{
+        $var: 640px * 0.9;
+        max-width: $var;
+    }
+    
+
+    
+
+    // debug
+    body{
+        main{
+            #middle{
+                section{
+                    border: 5px solid blue;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: screenSize(screen-sm-min)) and (max-width: screenSize(screen-m-min)-1){
+   
+    #main_img{
+        $var: 640px * 0.9;
+        max-width: $var;
+    }
+    body{
+        header{
+            .containter{
+                .main{
+                    #logo{
+                        #main_logo{
+                           // max-width: screenSize(screen-m-min);
+                        }
+                    }
+                }
+            }
+        }
+
+       // debug
+        main{
+            #middle{
+                section{
+                    border: 5px solid white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Mobile sized screens */
+@media(max-width: screenSize(screen-sm-min)-1){
+
+    %fullWidth{
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+
+    /* General structure */
+    body{
+        
+        header{
+            .topnav{
+                overflow: hidden;
+                position: relative;
+                background-color: bkaColor(background_secondary);
+                margin: 0 0 2px;
+            
+                #burgerNavLinks{
+                    display: none;
+                    float: right;
+
+                    /* Only on mobile devices so the font size is being kept here*/
+                    font-size: 1.2em;
+                    text-align: right;
+                }
+                a{
+                    color: bkaColor(font_secondary);
+                    padding: 5px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+                .icon{
+                    position: absolute;
+                    float: right;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    /* Only on mobile devices so the font size is being kept here*/
+                    font-size: 1.7em;
+                }
+                a:hover{
+                    background-color: #ddd;
+                    color: bkaColor(font);
+                }
+            }
+        }
+
+        main{
+            #adress__map{
+                width: 400px;
+                height: 200px;
+            }
+        }
+    }
+}

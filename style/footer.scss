@@ -1,0 +1,47 @@
+@mixin footer2(){
+    width: 100%;
+
+    /* ???? */
+    font-weight: lighter;
+    text-align: center;
+    padding: 1em 2em;
+    
+
+    #footer_logo{
+        margin: 1.5em 0;
+        width: 10em;
+    }  
+
+    .msm_nav{
+        /* align al little left to centralize */
+        margin-left: -2em;
+
+        
+        ul{            
+            li{
+                display: inline;
+
+                /* closer spacing */
+                margin-right: .5em;            
+            }
+        }
+
+        .msm-nav-icon img{
+            width: 3.2em;
+            width: 1.9em;
+
+            /* make the icons stand out from the dark background; invert the colors from black to white */
+            -webkit-filter: invert(1);
+            filter: invert(1);
+
+            /* closer spacing */
+	        margin-right: -.125em
+        }   
+    }
+
+    .impressum{
+        font-size: .9em;
+
+        margin: 2.5em 0;
+    }
+}
