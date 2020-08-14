@@ -287,6 +287,10 @@ footer .impressum {
     background-position-y: -70px;
     margin-bottom: 20px;
   }
+  .container_video_wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
   .topnav {
     position: -webkit-sticky;
     position: sticky;
