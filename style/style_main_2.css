@@ -70,7 +70,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100px;
+  min-height: 80px;
   background-color: #FF4516;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -81,7 +81,7 @@ body {
 .topnav #navlogo {
   position: relative;
   margin-left: 20px;
-  height: 80px;
+  height: 70px;
 }
 
 .topnav .NavLinks {
@@ -110,7 +110,7 @@ body {
 .topnav .NavLinks li a {
   color: #FAFFF3;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
 }
 
@@ -118,7 +118,23 @@ body {
   color: #1a2635;
 }
 
-header .topline, header .underline, header .intro__text {
+header {
+  background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
+  background-repeat: no-repeat;
+  background-size: 1620px;
+  background-position-x: center;
+  background-position-y: -70px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+header #header-background {
+  display: none;
+  position: absolute;
+  z-index: -2;
+}
+
+header .topline, header .underline {
   background-color: #FF4516;
   text-align: center;
   text-transform: uppercase;
@@ -139,11 +155,19 @@ header .underline {
 }
 
 header .intro__text {
-  font-size: 2rem;
+  position: relative;
+  display: inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: none;
-  background-color: #F8F8F8;
   color: #1a2635;
-  margin-bottom: 40px;
+  padding: 0;
+}
+
+header .intro__text h2 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 header #main_logo {
@@ -257,13 +281,19 @@ footer .impressum {
   .desktop {
     display: none;
   }
+  header {
+    background-size: 1620px;
+    background-position-x: center;
+    background-position-y: -70px;
+    margin-bottom: 20px;
+  }
   .topnav {
     position: -webkit-sticky;
     position: sticky;
     min-height: 50px;
     z-index: 2;
     top: 0;
-    margin: 0 0 2px;
+    margin: 0;
     display: block;
     text-align: right;
     /* custom (css) burger icon */
@@ -280,7 +310,7 @@ footer .impressum {
   .topnav .NavLinks {
     display: block;
     position: fixed;
-    right: -55vw;
+    right: -155vw;
     top: 0px;
     height: 100vh;
     width: 55vw;
@@ -288,12 +318,12 @@ footer .impressum {
     margin-left: auto;
     z-index: 2;
     background-color: #FF4516;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
   .topnav .NavLinks li {
     display: block;
-    padding: 5px 30px;
+    padding: 5px 20px;
     margin: 0 0 30px 0;
     text-align: right;
   }
@@ -312,7 +342,7 @@ footer .impressum {
   }
   .topnav .hamburger {
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);

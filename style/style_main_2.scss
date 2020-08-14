@@ -141,7 +141,7 @@ body{
 
 .topnav{      
     display: flex;  
-    min-height: 100px;
+    min-height: 80px;
    
     background-color: bkaColor(background_secondary);
     align-items: center;
@@ -149,7 +149,7 @@ body{
     #navlogo{
         position: relative;
         margin-left: 20px;
-        height: 80px;
+        height: 70px;
     }
     .NavLinks {
         display: flex;
@@ -170,7 +170,7 @@ body{
                 color: bkaColor(font_secondary);
                 
                 text-decoration: none;
-                font-size: 3rem;
+                font-size: 2.6rem;
                 font-weight: bold;
                 
             }
@@ -189,6 +189,22 @@ body{
 
 
 header{
+
+    background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
+    background-repeat: no-repeat;  
+    // background-position: center;
+    background-size: 1620px;
+    background-position-x: center;
+    background-position-y: -70px;
+    
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    #header-background{
+        display: none;
+        position: absolute;
+        z-index: -2;
+    }
+    
     .topline{
         
         background-color: bkaColor(background_secondary);
@@ -212,13 +228,20 @@ header{
         color: bkaColor(font_secondary);
     }
     .intro__text{
-        @extend .topline;
-
-        font-size: 2rem;
+        position: relative;
+        display: inline;
+        align-items: center;
+        
         text-transform: none;
-        background-color: bkaColor(background_primary);
+       
         color: bkaColor(font);
-        margin-bottom: 40px;
+        padding: 0;
+        
+        h2{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+       
     }
     #main_logo{
         text-align: center;
@@ -346,12 +369,20 @@ footer{
         display: none;
     }
     
+    header{
+        background-size: 1620px;
+        background-position-x: center;
+        background-position-y: -70px;
+        
+        margin-bottom: 20px;
+    }
+
     .topnav{
         position: sticky;
         min-height: 50px;
         z-index: 2;
         top: 0;
-        margin: 0 0 2px;
+        margin: 0;
         
         display: block;
         text-align: right;
@@ -367,7 +398,7 @@ footer{
         .NavLinks {
            display: block;
            position: fixed;
-           right: -55vw;
+           right: -155vw;
            top: 0px;
            height: 100vh;
            width: 55vw;
@@ -376,11 +407,11 @@ footer{
            z-index: 2;
 
            background-color: #FF4516;
-           transition: all 0.5s ease-out;  
+           transition: all 0.5s linear;  
 
             li{
                 display: block;
-                padding: 5px 30px;
+                padding: 5px 20px;
                 margin: 0 0 30px 0;
                 text-align: right;
                 a{
@@ -403,7 +434,7 @@ footer{
         /* custom (css) burger icon */
         .hamburger{
             position: absolute;
-            right: 30px;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
@@ -447,8 +478,5 @@ footer{
     .mobile{
         display: none;
     }
-    
-    
-    
 }
 
