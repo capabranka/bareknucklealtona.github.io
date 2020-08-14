@@ -70,7 +70,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  min-height: 100px;
   background-color: #FF4516;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -81,7 +81,7 @@ body {
 .topnav #navlogo {
   position: relative;
   margin-left: 20px;
-  width: 100px;
+  height: 80px;
 }
 
 .topnav .NavLinks {
@@ -110,7 +110,7 @@ body {
 .topnav .NavLinks li a {
   color: #FAFFF3;
   text-decoration: none;
-  font-size: 2.08rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -260,6 +260,7 @@ footer .impressum {
   .topnav {
     position: -webkit-sticky;
     position: sticky;
+    min-height: 50px;
     z-index: 2;
     top: 0;
     margin: 0 0 2px;
@@ -272,17 +273,18 @@ footer .impressum {
     left: 0px;
     z-index: 3;
     top: 50%;
+    height: 45px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
   .topnav .NavLinks {
     display: block;
     position: fixed;
-    right: -35vw;
+    right: -55vw;
     top: 0px;
     height: 100vh;
-    width: 30vw;
-    padding-top: 50px;
+    width: 55vw;
+    padding-top: 100px;
     margin-left: auto;
     z-index: 2;
     background-color: #FF4516;
@@ -291,7 +293,7 @@ footer .impressum {
   }
   .topnav .NavLinks li {
     display: block;
-    padding: 5px 10px;
+    padding: 5px 30px;
     margin: 0 0 30px 0;
     text-align: right;
   }
@@ -310,20 +312,24 @@ footer .impressum {
   }
   .topnav .hamburger {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     cursor: pointer;
     z-index: 3;
   }
   .topnav .hamburger .line {
-    width: 30px;
-    height: 3px;
+    display: block;
+    width: 35px;
+    height: 5px;
     background-color: #F8F8F8;
-    border: solid 2px #F8F8F8;
-    border-radius: 10%;
-    margin: 5px;
+    border-radius: 1px;
     -webkit-transition: all 0.2s ease-in, opacity 0.1s linear;
     transition: all 0.2s ease-in, opacity 0.1s linear;
+  }
+  .topnav .hamburger .line + .line {
+    margin-top: 6px;
   }
   .topnav .hamburger.open .line {
     background-color: #F8F8F8;
@@ -339,8 +345,8 @@ footer .impressum {
             transform: translateX(40px);
   }
   .topnav .hamburger.open .line:nth-child(3) {
-    -webkit-transform: translateY(-9px) rotate(-45deg);
-            transform: translateY(-9px) rotate(-45deg);
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+            transform: translateY(-12px) rotate(-45deg);
   }
 }
 

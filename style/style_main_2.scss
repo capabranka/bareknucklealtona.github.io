@@ -141,14 +141,15 @@ body{
 
 .topnav{      
     display: flex;  
-    height: 50px;
+    min-height: 100px;
+   
     background-color: bkaColor(background_secondary);
     align-items: center;
     position: relative;
     #navlogo{
         position: relative;
         margin-left: 20px;
-        width: 100px;
+        height: 80px;
     }
     .NavLinks {
         display: flex;
@@ -169,7 +170,7 @@ body{
                 color: bkaColor(font_secondary);
                 
                 text-decoration: none;
-                font-size: 2.08rem;
+                font-size: 3rem;
                 font-weight: bold;
                 
             }
@@ -347,6 +348,7 @@ footer{
     
     .topnav{
         position: sticky;
+        min-height: 50px;
         z-index: 2;
         top: 0;
         margin: 0 0 2px;
@@ -359,16 +361,17 @@ footer{
             left: 0px;
             z-index: 3;
             top: 50%;
+            height: 45px;
             transform: translateY(-50%);
         }
         .NavLinks {
            display: block;
            position: fixed;
-           right: -35vw;
+           right: -55vw;
            top: 0px;
            height: 100vh;
-           width: 30vw;
-           padding-top: 50px;
+           width: 55vw;
+           padding-top: 100px;
            margin-left: auto;
            z-index: 2;
 
@@ -377,7 +380,7 @@ footer{
 
             li{
                 display: block;
-                padding: 5px 10px;
+                padding: 5px 30px;
                 margin: 0 0 30px 0;
                 text-align: right;
                 a{
@@ -400,19 +403,24 @@ footer{
         /* custom (css) burger icon */
         .hamburger{
             position: absolute;
-            right: 10px;
-            top: 10px;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
             z-index: 3;
             
             .line{
-                width: 30px;
-                height: 3px;
+                display: block;
+                width: 35px;
+                height: 5px;
                 background-color: bkaColor(background_primary);
-                border: solid 2px bkaColor(background_primary);
-                border-radius: 10%;
-                margin: 5px;
+                // border: solid 2px bkaColor(background_primary);
+                border-radius: 1px;
+                
                 transition: all 0.2s ease-in, opacity 0.1s linear;
+            }
+            .line + .line{
+                margin-top: 6px;
             }
         }
         .hamburger.open{
@@ -428,7 +436,7 @@ footer{
                 transform: translateX(40px);
             }
             .line:nth-child(3){
-                transform: translateY(-9px) rotate(-45deg);
+                transform: translateY(-12px) rotate(-45deg);
                 
             }
         }
