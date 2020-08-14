@@ -379,8 +379,8 @@ footer .impressum {
             transform: translateX(40px);
   }
   .topnav .hamburger.open .line:nth-child(3) {
-    -webkit-transform: translateY(-12px) rotate(-45deg);
-            transform: translateY(-12px) rotate(-45deg);
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+            transform: translateY(-13px) rotate(-45deg);
   }
 }
 
