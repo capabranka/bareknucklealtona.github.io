@@ -52,6 +52,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .map_wrapper {
@@ -181,17 +182,92 @@ header #main_logo img {
   max-width: 850px;
 }
 
-#local .section {
+h1 {
+  font-size: 55px;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+
+#event {
+  background-image: url("../gfx/pictures/crowd_photo_dark.png");
+  width: 100%;
+  min-height: 250px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 50px auto;
+  margin: 50px auto 0;
+}
+
+#event h1 {
+  margin: 50px auto;
+}
+
+#event .img-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.205);
+}
+
+#event .img-container img {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#event p {
+  margin: 50px auto;
+  font-size: 1.4rem;
+}
+
+#event h2 {
+  font-size: 2rem;
+  margin: 50px auto 0;
+}
+
+#event .videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+  width: 1200px;
+  padding: 20px 0;
+  margin: 0px auto 50px;
+}
+
+#event .videos .container_video_wrapper {
+  margin: auto 10px;
+}
+
+.section {
   position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
       grid-template-areas: "illustration illustration header header header" "illustration illustration text text text" "illustration illustration text text text" "illustration illustration info info info";
 }
 
-#local .section .section__illustration {
+@media (max-width: 767px) {
+  .section {
+        grid-template-areas: "illustration illustration illustration illustration illustration" "illustration illustration illustration illustration illustration" "header header header header header" "text text text text text"         "text text text text text"         "info info info info info";
+  }
+}
+
+.section .section__illustration {
   position: relative;
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
@@ -202,40 +278,32 @@ header #main_logo img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50%;
-     object-position: 50%;
 }
 
-#local .section h1 {
+.section h1 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: header;
-  font-size: 55px;
-  text-transform: uppercase;
-  margin: 0 1rem;
 }
 
-#local .section > p {
+.section > p {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: text;
   color: #313131;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 20px;
   margin: 0 1rem;
 }
 
-#local .section .infs {
+.section .infs {
   -ms-grid-row: 4;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: info;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
 }
 
 .infs {
@@ -246,28 +314,26 @@ header #main_logo img {
       grid-template-columns: 1fr 1fr 1fr;
   color: #313131;
   height: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid green;
 }
 
 .infs .infocard {
-  position: relative;
   text-align: center;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .infs .infocard img {
   width: 30px;
-  position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .infs .infocard p {
   font-size: 11px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .infs .infocard a {
@@ -275,31 +341,12 @@ header #main_logo img {
   color: inherit;
 }
 
-.infs .infocard:hover {
-  background-color: #111111;
-}
-
-.infs .infocard:hover img {
-  -webkit-filter: invert(0.9);
-          filter: invert(0.9);
-}
-
-.infs .infocard:hover p {
-  color: #f3f3f3;
-}
-
 main section:nth-child(1) {
   margin-top: 50px;
 }
 
 main section {
-  max-width: 1000px;
-  margin: 0 auto 40px;
-}
-
-main section h1, main section h2 {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto 100px;
 }
 
 main section .section__header {

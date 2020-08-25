@@ -108,8 +108,6 @@ body{
     right: 0;
     margin: auto;
 
-
-
     .video_wrapper{
         position: relative;       
         margin: 0 auto;
@@ -124,6 +122,7 @@ body{
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
     }
 }
@@ -255,51 +254,114 @@ header{
         }
     }
 }
+h1{
+    font-size: 55px;
+    text-transform: uppercase;
+    margin: 0 1rem;
+}
 
+#event{
+    
+    background-image: url("../gfx/pictures/crowd_photo_dark.png");
+   
+    width: 100%;
+    min-height: 250px;
 
-#local{
-    // border: 1px solid black;
-    .section{
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-auto-rows: 1fr;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+
+    padding: 50px auto;
+    margin: 50px auto 0;
+   h1{
+       margin: 50px auto;
+   }
+    .img-container{
+        width: 100%;
+        background: rgba(255, 255, 255, 0.205);
+        img{
+       
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+    }
+    p{
+        margin: 50px auto;
+        font-size: 1.4rem;
+    }
+    h2{
+        font-size: 2rem;
+        margin: 50px auto 0;
+    }
+    .videos{
+        display: flex;
+        height: 200px;
+        width: 1200px;
+        padding: 20px 0;
+        margin: 0px auto 50px;    
+        //background-color: rgba(0, 0, 0, 0.74);
+        
+        .container_video_wrapper{
+            margin: auto 10px;
+        }
+    }
+}
+
+.section{
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    //grid-auto-rows: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "illustration illustration header header header"
+        "illustration illustration text text text"
+        "illustration illustration text text text"
+        "illustration illustration info info info"
+        ;
+        
+    @include mobile{
         grid-template-areas: 
-            "illustration illustration header header header"
-            "illustration illustration text text text"
-            "illustration illustration text text text"
-            "illustration illustration info info info"
-            ;
-            
+        "illustration illustration illustration illustration illustration"
+        "illustration illustration illustration illustration illustration"
+        "header header header header header"
+        "text text text text text"        
+        "text text text text text"        
+        "info info info info info"
+        ;
 
-        .section__illustration{
-            position: relative;
-            grid-area: illustration;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    }
+
+    .section__illustration{
+        position: relative;
+        grid-area: illustration;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         
-            object-position: 50%;
-            
-        }
-        h1{
-            grid-area: header;
-            font-size: 55px;
-            text-transform: uppercase;
-            margin: 0 1rem;
-        }
         
-        > p{
-            grid-area: text;
-            color: rgb(49, 49, 49);
-            font-size: 12px;
-            line-height: 20px;
-            margin: 0 1rem;
-        }
-        .infs{
-            grid-area: info;
-            align-self: end;
-        }
+
+    }
+    h1{
+        grid-area: header;
+    }
+    
+    > p{
+        grid-area: text;
+        color: rgb(49, 49, 49);
+        font-size: 1.2rem;
+        line-height: 20px;
+        margin: 0 1rem;
+    }
+    .infs{
+        grid-area: info;
     }
 }
 
@@ -309,56 +371,39 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     color: rgb(49, 49, 49);
     height: 100%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 
+    border: 1px solid green;
     .infocard{
-        position: relative;
         text-align: center;
-        transition: all 0.1s ease-out;
+        align-self: center;
         img{
             width: 30px;
-            position: relative;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         p{
             font-size: 11px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
         }
         a{
             text-decoration: none;
             color: inherit;
-        }
-
-        &:hover{
-            background-color: rgb(17, 17, 17);
-            img{
-                filter: invert(0.9);
-            }
-            p{
-                 color: rgb(243, 243, 243);;
-            }
-        }
-    } 
-              
+        }  
+    }  
 }
 
 
 
 main{
-   
-
+    //???
     section:nth-child(1){
         margin-top: 50px;
     }
     section{
-        max-width: 1000px; 
-        margin: 0 auto 40px;
-        h1, h2{
-            margin: 0; 
-            padding: 0;
-        }
+        // max-width: 1000px; 
+         margin: 0 auto 100px;
+       
         //border: 2px solid bkaColor(background_secondary);
         .section__header{
             background-color: bkaColor(background_primary);
@@ -407,11 +452,6 @@ main{
             border: 2px solid #FF4516;
         }
     }    
- 
-    
-    @include desktop{
-        
-    }
 }
 
 
