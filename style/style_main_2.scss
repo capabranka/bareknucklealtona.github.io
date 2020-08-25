@@ -144,7 +144,7 @@ body{
     display: flex;  
     min-height: 80px;
    
-    background-color: #FF7E16;//bkaColor(background_secondary);
+    background-color: bkaColor(background_secondary);
     align-items: center;
     position: relative;
     #navlogo{
