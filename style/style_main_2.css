@@ -188,8 +188,11 @@ h1 {
   margin: 0 1rem;
 }
 
-#event {
+.event, .weekly {
   background-image: url("../gfx/pictures/crowd_photo_dark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2020px;
   width: 100%;
   min-height: 250px;
   color: white;
@@ -209,31 +212,32 @@ h1 {
   margin: 50px auto 0;
 }
 
-#event h1 {
+.event h1, .weekly h1 {
   margin: 50px auto;
 }
 
-#event .img-container {
+.event .img-container, .weekly .img-container {
   width: 100%;
   background: rgba(255, 255, 255, 0.205);
 }
 
-#event .img-container img {
+.event .img-container img, .weekly .img-container img {
   max-width: 400px;
   margin: 0 auto;
 }
 
-#event p {
+.event p, .weekly p {
   margin: 50px auto;
   font-size: 1.4rem;
+  width: 80%;
 }
 
-#event h2 {
+.event h2, .weekly h2 {
   font-size: 2rem;
   margin: 50px auto 0;
 }
 
-#event .videos {
+.event .videos, .weekly .videos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,8 +247,15 @@ h1 {
   margin: 0px auto 50px;
 }
 
-#event .videos .container_video_wrapper {
+.event .videos .container_video_wrapper, .weekly .videos .container_video_wrapper {
   margin: auto 10px;
+}
+
+.weekly {
+  background-image: url("../gfx/pictures/weekly_dark_2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2020px;
 }
 
 .section {
@@ -317,7 +328,6 @@ h1 {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  border: 1px solid green;
 }
 
 .infs .infocard {
@@ -325,6 +335,8 @@ h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .infs .infocard img {

@@ -260,10 +260,12 @@ h1{
     margin: 0 1rem;
 }
 
-#event{
+.event{
     
     background-image: url("../gfx/pictures/crowd_photo_dark.png");
-   
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: 2020px;
     width: 100%;
     min-height: 250px;
 
@@ -292,6 +294,7 @@ h1{
     p{
         margin: 50px auto;
         font-size: 1.4rem;
+        width: 80%;
     }
     h2{
         font-size: 2rem;
@@ -309,6 +312,16 @@ h1{
             margin: auto 10px;
         }
     }
+}
+
+.weekly{
+    @extend .event;
+    background-image: url("../gfx/pictures/weekly_dark_2.jpg");
+    background-repeat: no-repeat;  
+    background-position: center;
+     background-size: 2020px;
+    // background-position-x: center;
+    // background-position-y: -70px;
 }
 
 .section{
@@ -374,11 +387,15 @@ h1{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-
-    border: 1px solid green;
+    //background-color: rgba(0, 0, 0, 0.616);
+    
+    //border: 1px solid green;
     .infocard{
         text-align: center;
         align-self: center;
+       
+        filter: invert(1);
+        
         img{
             width: 30px;
             margin-top: 20px;
