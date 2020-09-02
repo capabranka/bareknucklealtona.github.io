@@ -38,6 +38,8 @@ $colorscheme: (
 
 
 $breakpoints:(
+    // Small smartphones like the iPhone se
+    screen-xs-max: 350px,
     // Small tablets and large smartphones (landscape view)
     screen-sm-min: 567px,
     // Small tablets (portrait view)
@@ -52,6 +54,11 @@ $breakpoints:(
     @return map-get($breakpoints, $screentype);
 }
 
+@mixin small_mobile{
+    @media(max-width: screenSize(screen-xs-max)){
+        @content;
+    }
+}
 
 @mixin mobile{
     @media(max-width: screenSize(screen-m-min)-1){
@@ -285,7 +292,7 @@ h1{
         width: 100%;
         background: rgba(255, 255, 255, 0.205);
         img{
-       
+            width: 100%;
             max-width: 400px;
             margin: 0 auto;
         }
@@ -300,17 +307,29 @@ h1{
         font-size: 2rem;
         margin: 50px auto 0;
     }
-    .videos{
-        display: flex;
-        height: 200px;
-        width: 1200px;
-        padding: 20px 0;
-        margin: 0px auto 50px;    
-        //background-color: rgba(0, 0, 0, 0.74);
-        
+    .videos_area{
+        position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+    
         .container_video_wrapper{
-            margin: auto 10px;
-        }
+            position: relative;
+            margin: 5px auto;
+            
+            .video_wrapper{
+                position: relative;
+                display: flex;
+
+                .youtube{
+                    width: 100%;
+                    border: none;
+                }
+            }
+        }      
     }
 }
 
@@ -391,7 +410,22 @@ h1{
     margin: 0 auto;
     //background-color: rgba(0, 0, 0, 0.616);
     
-    //border: 1px solid green;
+    @include small_mobile{
+       grid-template-columns: 1fr;
+      
+       .infocard{
+        margin: 10px 0;
+           img{
+               margin: 0px auto 10px;
+               
+           }
+           p{
+            margin: 0 auto;
+            margin: 0 auto 0;
+           }
+       }
+    }
+
     .infocard{
         text-align: center;
         align-self: center;
@@ -400,7 +434,7 @@ h1{
         
         img{
             width: 30px;
-            margin-top: 20px;
+           // margin-top: 20px;
         }
         p{
             font-size: 11px;
@@ -633,4 +667,3 @@ footer{
         display: none;
     }
 }
-
