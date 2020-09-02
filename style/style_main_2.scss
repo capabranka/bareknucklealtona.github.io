@@ -316,10 +316,12 @@ h1{
 
 .weekly{
     @extend .event;
-    background-image: url("../gfx/pictures/weekly_dark_2.jpg");
-    background-repeat: no-repeat;  
-    background-position: center;
+    // background-image: url("../gfx/pictures/weekly_dark_2.jpg");
+    // background-repeat: no-repeat;  
+    // background-position: center;
+    background-image: none;
      background-size: 2020px;
+     background-color: bkaColor(background_secondary);
     // background-position-x: center;
     // background-position-y: -70px;
 }

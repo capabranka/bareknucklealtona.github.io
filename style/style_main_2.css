@@ -252,10 +252,9 @@ h1 {
 }
 
 .weekly {
-  background-image: url("../gfx/pictures/weekly_dark_2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: none;
   background-size: 2020px;
+  background-color: #FF4516;
 }
 
 .section {
