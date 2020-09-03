@@ -67,58 +67,6 @@ body {
   height: 100%;
 }
 
-.topnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 80px;
-  background-color: #FF4516;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.topnav #navlogo {
-  position: relative;
-  margin-left: 20px;
-  height: 70px;
-}
-
-.topnav .NavLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 60%;
-  margin-left: auto;
-  list-style-type: none;
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .topnav .NavLinks {
-    width: 50%;
-  }
-}
-
-.topnav .NavLinks li {
-  position: relative;
-  text-align: center;
-}
-
-.topnav .NavLinks li a {
-  color: #FAFFF3;
-  text-decoration: none;
-  font-size: 2.6rem;
-  font-weight: bold;
-}
-
-.topnav .NavLinks li:hover a {
-  color: #1a2635;
-}
-
 header {
   background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
   background-repeat: no-repeat;
@@ -475,20 +423,62 @@ footer .impressum {
   margin: 2.5em 0;
 }
 
+.topnav {
+  background-color: #FF4516;
+}
+
+@media (min-width: 768px) {
+  .topnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .topnav #navlogo {
+    position: relative;
+    margin-left: 20px;
+    height: 70px;
+  }
+  .topnav .NavLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 60%;
+    margin-left: auto;
+    list-style-type: none;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 992px) {
+  .topnav .NavLinks {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .topnav .NavLinks li {
+    position: relative;
+    text-align: center;
+  }
+  .topnav .NavLinks li a {
+    color: #FAFFF3;
+    text-decoration: none;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+  .topnav .NavLinks li:hover a {
+    color: #1a2635;
+  }
+}
+
 @media (max-width: 767px) {
-  .desktop {
-    display: none;
-  }
-  header {
-    background-size: 1620px;
-    background-position-x: center;
-    background-position-y: -70px;
-    margin-bottom: 20px;
-  }
-  .container_video_wrapper {
-    width: 100%;
-    max-width: 100%;
-  }
   .topnav {
     position: -webkit-sticky;
     position: sticky;
@@ -503,6 +493,7 @@ footer .impressum {
   .topnav #navlogo {
     position: absolute;
     left: 0px;
+    margin-left: 20px;
     z-index: 3;
     top: 50%;
     height: 45px;
@@ -579,6 +570,22 @@ footer .impressum {
   .topnav .hamburger.open .line:nth-child(3) {
     -webkit-transform: translateY(-13px) rotate(-45deg);
             transform: translateY(-13px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  header {
+    background-size: 1620px;
+    background-position-x: center;
+    background-position-y: -70px;
+    margin-bottom: 20px;
+  }
+  .container_video_wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

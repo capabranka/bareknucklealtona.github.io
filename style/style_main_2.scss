@@ -149,9 +149,6 @@ body{
 
 
 
-
-
-
 header{
 
     background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
@@ -506,107 +503,15 @@ footer{
 
 
 
+
 .topnav{
-    position: sticky;
-    min-height: 50px;
-    z-index: 2;
-    top: 0;
-    margin: 0;
-    
-    display: block;
-    text-align: right;
-
-    #navlogo{
-        position: absolute;
-        left: 0px;
-        z-index: 3;
-        top: 50%;
-        height: 45px;
-        transform: translateY(-50%);
-    }
-    .NavLinks {
-       display: block;
-       position: fixed;
-       right: -155vw;
-       top: 0px;
-       height: 100vh;
-       width: 55vw;
-       padding-top: 50px;
-       margin-left: auto;
-       z-index: 2;
-
-       background-color: #FF4516;
-       transition: all 0.5s linear;  
-
-        li{
-            display: block;
-            padding: 5px 20px;
-            margin: 0 0 30px 0;
-            text-align: right;
-            a{
-                color: bkaColor(font_secondary);
-                text-decoration: none;
-            }
-        }
-        li:hover{
-            a{
-                color: #FF4516;
-            }
-            background-color: bkaColor(background_primary);
-        }
-    }
-    
-    .NavLinks.open{
-        right: 0vw;
-    }
-
-    /* custom (css) burger icon */
-    .hamburger{
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        z-index: 3;
-        
-        .line{
-            display: block;
-            width: 35px;
-            height: 5px;
-            background-color: bkaColor(background_primary);
-            // border: solid 2px bkaColor(background_primary);
-            border-radius: 1px;
-            
-            transition: all 0.2s ease-in, opacity 0.1s linear;
-        }
-        .line + .line{
-            margin-top: 6px;
-        }
-    }
-    .hamburger.open{
-        .line{
-            background-color: bkaColor(background_primary);
-            border-color: bkaColor(background_primary);
-        }
-        .line:nth-child(1){
-            transform: translateY(9px) rotate(45deg);
-        }
-        .line:nth-child(2){
-            opacity: 0;
-            transform: translateX(40px);
-        }
-        .line:nth-child(3){
-            transform: translateY(-13px) rotate(-45deg);
-            
-        }
-    }
-
+    background-color: bkaColor(background_secondary);
+   
     @include desktop{
-             
         display: flex;  
         min-height: 80px;
         
-        background-color: bkaColor(background_secondary);
+        
         align-items: center;
         position: relative;
         #navlogo{
@@ -619,6 +524,7 @@ footer{
             justify-content: space-around;
             width: 60%;
             
+    
             margin-left: auto;
             list-style-type: none;
             position: relative;
@@ -630,6 +536,8 @@ footer{
                 text-align: center;
                 
                 a{
+                    
+    
                     color: bkaColor(font_secondary);
                     
                     text-decoration: none;
@@ -646,12 +554,104 @@ footer{
                 
             }
         }
+    }
+    @include mobile{
+        position: sticky;
+        min-height: 50px;
+        z-index: 2;
+        top: 0;
+        margin: 0;
         
+        display: block;
+        text-align: right;
+
+        #navlogo{
+            position: absolute;
+            left: 0px;
+            margin-left: 20px;
+            z-index: 3;
+            top: 50%;
+            height: 45px;
+            transform: translateY(-50%);
+        }
+        .NavLinks {
+        display: block;
+        position: fixed;
+        right: -155vw;
+        top: 0px;
+        height: 100vh;
+        width: 55vw;
+        padding-top: 50px;
+        margin-left: auto;
+        z-index: 2;
+
+        background-color: #FF4516;
+        transition: all 0.5s linear;  
+
+            li{
+                display: block;
+                padding: 5px 20px;
+                margin: 0 0 30px 0;
+                text-align: right;
+                a{
+                    color: bkaColor(font_secondary);
+                    text-decoration: none;
+                }
+            }
+            li:hover{
+                a{
+                    color: #FF4516;
+                }
+                background-color: bkaColor(background_primary);
+            }
+        }
+        
+        .NavLinks.open{
+            right: 0vw;
+        }
+
+        /* custom (css) burger icon */
+        .hamburger{
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 3;
+            
+            .line{
+                display: block;
+                width: 35px;
+                height: 5px;
+                background-color: bkaColor(background_primary);
+                // border: solid 2px bkaColor(background_primary);
+                border-radius: 1px;
+                
+                transition: all 0.2s ease-in, opacity 0.1s linear;
+            }
+            .line + .line{
+                margin-top: 6px;
+            }
+        }
+        .hamburger.open{
+            .line{
+                background-color: bkaColor(background_primary);
+                border-color: bkaColor(background_primary);
+            }
+            .line:nth-child(1){
+                transform: translateY(9px) rotate(45deg);
+            }
+            .line:nth-child(2){
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            .line:nth-child(3){
+                transform: translateY(-13px) rotate(-45deg);
+                
+            }
+        }
     }
 }
-
-
-
 
 
 @include mobile{
@@ -667,12 +667,20 @@ footer{
         margin-bottom: 20px;
     }
 
-    
-    .container_video_wrapper{width: 100%;
-    max-width: 100%;}
+    .container_video_wrapper{
+        width: 100%;
+        max-width: 100%;
+    }
 
     
+    
+    @include desktop{
+    }
 }
+
+
+    
+
 
 @include desktop{
     .mobile{
