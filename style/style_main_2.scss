@@ -381,11 +381,9 @@ footer{
         float: none;
         position: fixed;
         list-style-type: none;
-        
+        background-color: bkaColor(background_secondary);
         right: -55%;
         top: 70px;
-
-        background-color: bkaColor(background_secondary);
         height: 100vh;
         width: 55%;
 
@@ -396,7 +394,6 @@ footer{
             right: 0;
         }
 
-        
         li{
             display: block;
             padding: 20px 20px;
@@ -431,7 +428,6 @@ footer{
             width: 35px;
             height: 5px;
             background-color: bkaColor(background_primary);
-            // border: solid 2px bkaColor(background_primary);
             border-radius: 1px;
             
             transition: all 0.2s ease-in, opacity 0.1s linear;
