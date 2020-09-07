@@ -489,10 +489,6 @@ footer .impressum {
     float: right;
     display: block;
     width: auto;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
     height: 70px;
   }
   .topnav .NavLinks li {
