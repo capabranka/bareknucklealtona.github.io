@@ -112,12 +112,6 @@ header {
   padding-bottom: 20px;
 }
 
-header #header-background {
-  display: none;
-  position: absolute;
-  z-index: -2;
-}
-
 header .topline, header .underline {
   background-color: #FF4516;
   text-align: center;
@@ -241,7 +235,7 @@ h1 {
   margin: 0 auto;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .infs {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -405,7 +399,6 @@ footer .impressum {
   top: 70px;
   height: 100vh;
   width: 55%;
-  z-index: 2;
   text-align: right;
   -webkit-transition: right .3s linear;
   transition: right .3s linear;
