@@ -485,6 +485,10 @@ footer .impressum {
     position: relative;
   }
   .topnav .NavLinks {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     position: relative;
     float: right;
     display: block;
