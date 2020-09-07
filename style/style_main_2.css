@@ -373,6 +373,7 @@ footer .impressum {
   background-color: #FF4516;
   height: 70px;
   z-index: 2;
+  overflow: hidden;
   /* custom (css) burger icon */
 }
 
