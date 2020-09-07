@@ -377,10 +377,8 @@ footer .impressum {
   /* custom (css) burger icon */
 }
 
-.topnav::after {
-  content: "";
-  display: table;
-  clear: both;
+.topnav, .topnav > * {
+  border: 1px solid blue;
 }
 
 .topnav #navlogo {
@@ -390,7 +388,7 @@ footer .impressum {
   height: 70px;
 }
 
-.topnav .NavLinks {
+.topnav .navLinks {
   float: none;
   position: fixed;
   list-style-type: none;
@@ -405,20 +403,20 @@ footer .impressum {
   transition: right .3s linear;
 }
 
-.topnav .NavLinks.open {
+.topnav .navLinks.open {
   right: 0;
 }
 
-.topnav .NavLinks li {
+.topnav .navLinks li {
   display: block;
   padding: 20px 20px;
 }
 
-.topnav .NavLinks li:hover {
+.topnav .navLinks li:hover {
   background: tomato;
 }
 
-.topnav .NavLinks li a {
+.topnav .navLinks li a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -479,7 +477,7 @@ footer .impressum {
   .topnav {
     position: relative;
   }
-  .topnav .NavLinks {
+  .topnav .navLinks {
     left: 0;
     top: 0;
     right: 0;
@@ -490,12 +488,12 @@ footer .impressum {
     width: auto;
     height: 70px;
   }
-  .topnav .NavLinks li {
+  .topnav .navLinks li {
     display: inline-block;
     margin-left: 50px;
     padding-top: 25px;
   }
-  .topnav .NavLinks li:hover {
+  .topnav .navLinks li:hover {
     background: none;
   }
 }
