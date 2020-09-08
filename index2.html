@@ -175,23 +175,23 @@
         
 
         // prevents the transitions of element-structures on window resize
-        // stopResponsiveTransition();
-        // function stopResponsiveTransition() {
-        //     const navLinks = document.querySelector('.NavLinks').classList;
-        //     let timer = null;
-        //     window.addEventListener('resize', function () {
-        //         if (timer){
-        //             clearTimeout(timer);
-        //             timer = null;
-        //         }else {
-        //             navLinks.add('stop-transition');
-        //         }
-        //         timer = setTimeout(() => {
-        //             navLinks.remove('stop-transition');
-        //             timer = null;
-        //         }, 100);
-        //     });
-        // }
+        stopResponsiveTransition();
+        function stopResponsiveTransition() {
+            const navLinks = document.querySelector('.NavLinks').classList;
+            let timer = null;
+            window.addEventListener('resize', function () {
+                if (timer){
+                    clearTimeout(timer);
+                    timer = null;
+                }else {
+                    navLinks.add('stop-transition');
+                }
+                timer = setTimeout(() => {
+                    navLinks.remove('stop-transition');
+                    timer = null;
+                }, 100);
+            });
+        }
     </script>
 </body>
 </html>
