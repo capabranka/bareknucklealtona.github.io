@@ -462,8 +462,6 @@ footer .impressum {
 
 .topnav .hamburger.open .line:nth-child(2) {
   opacity: 0;
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
 }
 
 .topnav .hamburger.open .line:nth-child(3) {
