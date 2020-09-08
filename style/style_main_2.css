@@ -373,12 +373,7 @@ footer .impressum {
   background-color: #FF4516;
   height: 70px;
   z-index: 2;
-  overflow: hidden;
   /* custom (css) burger icon */
-}
-
-.topnav, .topnav > * {
-  border: 1px solid blue;
 }
 
 .topnav #navlogo {
@@ -400,7 +395,6 @@ footer .impressum {
   text-align: right;
   -webkit-transition: right .3s linear;
   transition: right .3s linear;
-  z-index: 2;
 }
 
 .topnav .navLinks.open {
@@ -464,8 +458,6 @@ footer .impressum {
 
 .topnav .hamburger.open .line:nth-child(2) {
   opacity: 0;
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
 }
 
 .topnav .hamburger.open .line:nth-child(3) {

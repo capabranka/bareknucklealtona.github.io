@@ -87,11 +87,7 @@ header{
     
     margin-bottom: 50px;
     padding-bottom: 20px;
-    // #header-background{
-    //     display: none;
-    //     position: absolute;
-    //     z-index: -2;
-    // }
+   
     
     .topline{
         
@@ -353,9 +349,9 @@ footer{
 
 .topnav{
     
-    &, & > *{
-        border: 1px solid blue;
-    }
+    // &, & > *{
+    //     border: 1px solid blue;
+    // }
 
     position: sticky;
     top: 0px;
@@ -365,9 +361,6 @@ footer{
     height: 70px;
     z-index: 2;
     
-    overflow: hidden;
-
-   
     #navlogo{
         float: left;
         margin-left: 20px;
@@ -387,8 +380,6 @@ footer{
         
         text-align: right;
         transition: right .3s linear;
-
-        z-index: 2;
 
         &.open{
             right: 0;
@@ -447,8 +438,7 @@ footer{
         }
         .line:nth-child(2){
             opacity: 0;
-            transform: translateX(40px);
-           
+           // transform: translateX(40px);
         }
         .line:nth-child(3){
             transform: translateY(-13px) rotate(-45deg);
