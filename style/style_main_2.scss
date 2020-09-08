@@ -365,7 +365,7 @@ footer{
     height: 70px;
     z-index: 2;
     
-    overflow: hidden;
+    //overflow: hidden;
 
    
     #navlogo{
@@ -387,6 +387,8 @@ footer{
         
         text-align: right;
         transition: right .3s linear;
+
+        z-index:2;
 
         &.open{
             right: 0;
