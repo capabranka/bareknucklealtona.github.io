@@ -105,7 +105,7 @@ body {
 header {
   background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
   background-repeat: no-repeat;
-  background-size: 1620px;
+  background-size: 1920px;
   background-position-x: center;
   background-position-y: -70px;
   margin-bottom: 50px;
@@ -170,6 +170,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 2020px;
+  background-size: 700%;
   background-color: black;
   width: 100%;
   min-height: 250px;
@@ -183,8 +184,9 @@ h1 {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   padding: 50px auto;
   margin: 50px auto 0;
@@ -192,6 +194,11 @@ h1 {
 
 .event h1, .weekly h1 {
   margin: 50px auto;
+}
+
+.event h2, .weekly h2 {
+  font-size: 2.5rem;
+  margin: 50px auto 25px;
 }
 
 .event .img-container, .weekly .img-container {
@@ -205,15 +212,22 @@ h1 {
   margin: 0 auto;
 }
 
-.event p, .weekly p {
+.event > p, .weekly > p {
   margin: 50px auto;
   font-size: 1.4rem;
-  width: 80%;
+  max-width: 90ch;
 }
 
-.event h2, .weekly h2 {
-  font-size: 2rem;
-  margin: 50px auto 0;
+@media (min-width: 768px) {
+  .event, .weekly {
+    background-size: 300%;
+  }
+}
+
+@media (min-width: 992px) {
+  .event, .weekly {
+    background-size: 2020px;
+  }
 }
 
 .weekly {
@@ -228,11 +242,9 @@ h1 {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  color: #313131;
   height: 100%;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 @media (max-width: 400px) {
@@ -257,15 +269,17 @@ h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  color: #F8F8F8;
 }
 
 .infs .infocard img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
   width: 30px;
 }
 
 .infs .infocard p {
+  margin: 50px auto;
   font-size: 11px;
 }
 
@@ -341,15 +355,10 @@ footer #footer_logo {
   width: 100px;
 }
 
-footer .msm_nav {
-  /* align al little left to centralize */
-  margin-left: -2em;
-}
-
 footer .msm_nav ul li {
   display: inline;
   /* spacing */
-  margin-right: .5em;
+  margin-left: .5em;
 }
 
 footer .msm_nav .msm-nav-icon img {
@@ -387,7 +396,6 @@ footer .impressum {
   float: none;
   position: fixed;
   list-style-type: none;
-  background-color: #FF4516;
   right: -55%;
   top: 70px;
   height: 100vh;
@@ -395,6 +403,8 @@ footer .impressum {
   text-align: right;
   -webkit-transition: right .3s linear;
   transition: right .3s linear;
+  background-color: #FF4516;
+  font-size: 1.8rem;
 }
 
 .topnav .navLinks.open {

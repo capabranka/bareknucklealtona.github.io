@@ -81,7 +81,7 @@ header{
 
     background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
     background-repeat: no-repeat;  
-    background-size: 1620px;
+    background-size: 1920px;
     background-position-x: center;
     background-position-y: -70px;
     
@@ -149,15 +149,18 @@ h1{
     background-repeat: no-repeat;  
     background-position: center;
     background-size: 2020px;
+    background-size: 700%; //the size for the small mobile view due to the vertical stretching of the videopanel
     background-color: black;
+    
     width: 100%;
     min-height: 250px;
 
     color: white;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     text-align: center;
 
     padding: 50px auto;
@@ -165,6 +168,10 @@ h1{
    h1{
        margin: 50px auto;
    }
+   h2{
+        font-size: 2.5rem;
+        margin: 50px auto 25px;
+    }
     .img-container{
         width: 100%;
         background: rgba(255, 255, 255, 0.205);
@@ -174,26 +181,30 @@ h1{
             margin: 0 auto;
         }
     }
-    p{
+    & > p{
         margin: 50px auto;
         font-size: 1.4rem;
-        width: 80%;
+        max-width: 90ch;
     }
-    h2{
-        font-size: 2rem;
-        margin: 50px auto 0;
-    }
-
 }
-
+@include mobile_large{
+    .event{
+        background-size: 300%;
+    }
+}
+@include desktop{
+    .event{
+        background-size: 2020px;
+    }
+}
 .weekly{
     @extend .event;
     // background-image: url("../gfx/pictures/weekly_dark_2.jpg");
     // background-repeat: no-repeat;  
     // background-position: center;
     background-image: none;
-     background-size: 2020px;
-     background-color: bkaColor(background_secondary);
+    background-size: 2020px;
+    background-color: bkaColor(background_secondary);
     // background-position-x: center;
     // background-position-y: -70px;
 }
@@ -202,40 +213,42 @@ h1{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    color: rgb(49, 49, 49);
+    
     height: 100%;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
-    //background-color: rgba(0, 0, 0, 0.616);
+  
     
     @include mobile_small{
-       grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
       
-       .infocard{
+        .infocard{
         margin: 10px 0;
-           img{
-               margin: 0px auto 10px;
-               
-           }
-           p{
-            margin: 0 auto;
-            margin: 0 auto 0;
-           }
-       }
+            img{
+                margin: 0px auto 10px;
+                
+            }
+            p{
+                margin: 0 auto;
+                margin: 0 auto 0;
+            }
+        }
     }
+   
 
     .infocard{
         text-align: center;
         align-self: center;
        
-        filter: invert(1);
         
+        color: bkaColor(background_primary);
         img{
+            filter: invert(1);
             width: 30px;
-           // margin-top: 20px;
+
         }
         p{
+            margin: 50px auto;
             font-size: 11px;
         }
         a{
@@ -320,15 +333,11 @@ footer{
     }  
 
     .msm_nav{
-        /* align al little left to centralize */
-        margin-left: -2em;
-        
         ul{            
             li{
                 display: inline;
-
                 /* spacing */
-                margin-right: .5em;       
+                margin-left: .5em;       
             }
         }
 
@@ -348,11 +357,6 @@ footer{
 
 
 .topnav{
-    
-    // &, & > *{
-    //     border: 1px solid blue;
-    // }
-
     position: sticky;
     top: 0px;
     right: 0px;
@@ -372,7 +376,6 @@ footer{
         float: none;
         position: fixed;
         list-style-type: none;
-        background-color: bkaColor(background_secondary);
         right: -55%;
         top: 70px;
         height: 100vh;
@@ -380,6 +383,10 @@ footer{
         
         text-align: right;
         transition: right .3s linear;
+
+        background-color: bkaColor(background_secondary);
+        font-size: 1.8rem;
+
 
         &.open{
             right: 0;
@@ -473,20 +480,3 @@ footer{
 .stop-transition{
     transition: none !important;
 }
-
-
-// @include mobile_large{
-//     .desktop{
-//         display: none;
-//     }
-        
-//     @include desktop{
-//     }
-// }
-
-
-// @include desktop{
-//     .mobile{
-//         display: none;
-//     }
-// }

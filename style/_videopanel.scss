@@ -39,9 +39,9 @@
 }
 
 
-
 @include mobile_large(){
     .videos_area{
+       
         grid-template-columns: repeat(2, 50%);
 
         .container_video_wrapper{
