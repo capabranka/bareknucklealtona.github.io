@@ -79,7 +79,7 @@ body{
 
 header{
 
-    background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg");
+    background-image: url("../gfx/pictures/crowd_photo_lighter.png.jpg"); //
     background-repeat: no-repeat;  
     background-size: 1920px;
     background-position-x: center;
@@ -323,7 +323,7 @@ main{
 footer{
     position: relative;
     text-align: center;
-    padding: 1em 2em;
+    padding: 20px 0px 120px 0px;
     background-color: bkaColor(background_secondary);
     color: bkaColor(font_secondary);
     
@@ -358,6 +358,8 @@ footer{
 
 .topnav{
     position: sticky;
+    display: flex;
+    justify-content: space-between;
     top: 0px;
     right: 0px;
     left: 0px;
@@ -366,7 +368,6 @@ footer{
     z-index: 2;
     
     #navlogo{
-        float: left;
         margin-left: 20px;
         padding: 5px;
         height: 70px;
@@ -385,7 +386,7 @@ footer{
         transition: right .3s linear;
 
         background-color: bkaColor(background_secondary);
-        font-size: 1.8rem;
+        font-size: 1.6rem;
 
 
         &.open{
