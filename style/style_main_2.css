@@ -236,6 +236,11 @@ h1 {
   background-color: #FF4516;
 }
 
+.weekly > p > a, .weekly > p > a:visited {
+  color: #1a2635;
+  font-weight: 600;
+}
+
 .infs {
   position: relative;
   display: -ms-grid;

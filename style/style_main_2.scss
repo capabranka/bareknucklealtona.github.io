@@ -193,6 +193,11 @@ h1{
     background-image: none;
     background-size: 2020px;
     background-color: bkaColor(background_secondary);
+    & > p > a, & > p > a:visited{
+        color: bkaColor(font);
+        font-weight: 600;
+       
+    }
 }
 
 .infs{
@@ -316,8 +321,7 @@ footer{
 
 
         &.open{
-            right: 0;
-            
+            right: 0;   
         }
 
         li{
@@ -384,8 +388,6 @@ footer{
 @include desktop{
     .topnav{
         position: relative;
-
-       
 
         .navLinks{
             left: 0; top: 0;right: 0; bottom: 0;
