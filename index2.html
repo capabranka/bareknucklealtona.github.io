@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Bareknuckle Altona</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/png" href="/gfx/icons/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel='stylesheet' type='text/css' media='screen' href='style/style_main_2.css' />
     <!-- Load Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,14 +30,14 @@
             <div class="line"></div>
         </div>
         <ul class="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#weekly">Weekly</a></li>
-            <li><a href="#footer">Contact</a></li>
-            <li><a href="index.html">Version1</a></li>
-            <li><a href="index2.html">Version2</a></li>
+            <li><a class="navLink" href="#home">Home</a></li>
+            <li><a class="navLink" href="#weekly">Weekly</a></li>
+            <li><a class="navLink" href="#footer">Contact</a></li>
+            <li><a class="navLink" href="index.html">Version1</a></li>
+            <li><a class="navLink" href="index2.html">Version2</a></li>
         </ul>
     </nav>
-    <header>
+    <header id="home">
         <!-- <div id="header-background"><img src="gfx/pictures/crowd_photo_lighter.png.jpg" /></div> -->
         <div class="container">
             <!-- <div class="topline desktop">
@@ -158,11 +159,21 @@
     <script>
         const burger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.navLinks');
-        burger.addEventListener('click', ()=>{
+        burger.addEventListener('click', toggleNavbar);
+        
+        const navLink = document.querySelectorAll('.navLink');
+
+        var i;
+        for(i = 0; i < navLink.length; i++){
+            navLink[i].addEventListener('click', toggleNavbar);
+            
+        }
+
+        function toggleNavbar(){
             navLinks.classList.toggle('open');
             burger.classList.toggle('open');
             
-        });
+        }
     </script>
 
     <script>

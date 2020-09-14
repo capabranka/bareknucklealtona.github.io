@@ -288,60 +288,6 @@ h1 {
   color: inherit;
 }
 
-main section:nth-child(1) {
-  margin-top: 50px;
-}
-
-main section {
-  margin: 0 auto 100px;
-}
-
-main section .section__header {
-  background-color: #F8F8F8;
-  color: #1a2635;
-  border-top: 20px solid #1a2635;
-  border-bottom: 20px solid #1a2635;
-  border-radius: 1px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-main section .section__header h1 {
-  font-weight: 900;
-  font-size: 4.5rem;
-  margin-bottom: 5px;
-}
-
-main section .section__header h2 {
-  font-weight: 900;
-  font-size: 2.8rem;
-}
-
-main section .section__content {
-  font-weight: 400;
-  font-size: 1.6rem;
-  text-align: center;
-  padding: 5px;
-}
-
-main section .section__content p {
-  margin: 10px auto 10px;
-}
-
-main section .section__content img {
-  max-width: 80%;
-  display: block;
-  margin: 0px auto  10px;
-}
-
-main section .section-strong {
-  border: 2px solid #FF4516;
-}
-
-main section .section-strong h2 {
-  color: #FF4516;
-}
-
 footer {
   position: relative;
   text-align: center;
@@ -351,14 +297,14 @@ footer {
 }
 
 footer #footer_logo {
-  margin: 1.5em 0;
-  width: 100px;
+  margin: 50px 0;
+  width: 150px;
 }
 
 footer .msm_nav ul li {
   display: inline;
   /* spacing */
-  margin-left: .5em;
+  margin-left: 5px;
 }
 
 footer .msm_nav .msm-nav-icon img {
@@ -369,8 +315,8 @@ footer .msm_nav .msm-nav-icon img {
 }
 
 footer .impressum {
-  font-size: 1.5rem;
-  margin: 2.5em 0;
+  font-size: 15rem;
+  margin: 25px 0;
 }
 
 .topnav {
@@ -398,7 +344,6 @@ footer .impressum {
 }
 
 .topnav .navLinks {
-  float: none;
   position: fixed;
   list-style-type: none;
   right: -55%;
@@ -490,7 +435,6 @@ footer .impressum {
     right: 0;
     bottom: 0;
     position: relative;
-    float: right;
     display: block;
     width: auto;
     height: 70px;
