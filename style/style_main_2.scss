@@ -2,15 +2,6 @@
 @import "videopanel";
 
 
-$colorscheme: (
-    background_primary: #F8F8F8,
-    background_secondary: #1a2635, //#2F3627,
-    background_third: #1a2635,
-    font: #1a2635,  //#2F3627,
-    font_secondary: #FAFFF3,
-    font_third: #7D0300,
-    link: #7D0300
-);
 
 $colorscheme: (
     background_primary: #F8F8F8,
@@ -295,17 +286,17 @@ footer{
     position: sticky;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 0px;
     right: 0px;
     left: 0px;
     background-color: bkaColor(background_secondary);
-    height: 70px;
+    height: 60px;
     z-index: 2;
     
     #navlogo{
         margin-left: 20px;
-        padding: 5px;
-        height: 70px;
+        height: 50px;
 
     }
 
@@ -313,7 +304,7 @@ footer{
         position: fixed;
         list-style-type: none;
         right: -55%;
-        top: 70px;
+        top: 60px;
         height: 100vh;
         width: 55%;
         
@@ -394,12 +385,14 @@ footer{
     .topnav{
         position: relative;
 
+       
+
         .navLinks{
             left: 0; top: 0;right: 0; bottom: 0;
             position: relative;
             display: block;
             width: auto;
-            height: 70px;
+            height: 60px;
 
             li{
                 display: inline-block;
