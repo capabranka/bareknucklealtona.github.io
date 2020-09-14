@@ -5,6 +5,17 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Bareknuckle Altona</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./gfx/icons/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./gfx/icons/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./gfx/icons/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./gfx/icons/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./gfx/icons/favicons/safari-pinned-tab.svg" color="#ff7e16">
+    <link rel="shortcut icon" href="./gfx/icons/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff4516">
+    <meta name="msapplication-config" content="./gfx/icons/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel='stylesheet' type='text/css' media='screen' href='style/style_main_2.css' />
     <!-- Load Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,35 +25,26 @@
     
 </head>
 <body>
-    <div id="debug"></div><div></div>
-    <!-- Top Navigation Menu -->
-    <nav class="topnav">
-        <!-- <div class="topline">FGC HAMBURG</div> -->
-        <!-- Navigation links (hidden by default) -->
-        
     
-        <img id="navlogo" src="gfx/bka_logo_asset_mobile.png"   alt="Logo BKA"/>
+    <!-- Top Navigation Menu -->    
+    <nav class="topnav">
+        <img id="navlogo" src="gfx/Asset27.png"   alt="Logo BKA"/>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <ul class="NavLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#weekly">Weekly</a></li>
-            <li><a href="#event">Event</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="index.html">Version1</a></li>
-            <li><a href="index2.html">Version2</a></li>
+        <ul class="navLinks">
+            <li><a class="navLink" href="#home">Home</a></li>
+            <li><a class="navLink" href="#weekly">Weekly</a></li>
+            <li><a class="navLink" href="#footer">Contact</a></li>
+            <!-- <li><a class="navLink" href="index.html">Version1</a></li>
+            <li><a class="navLink" href="index2.html">Version2</a></li> -->
         </ul>
     </nav>
-    <header>
-        <div id="header-background"><img src="gfx/pictures/crowd_photo_lighter.png.jpg" /></div>
-        <div class="container">
-            <!-- <div class="topline desktop">
-                FGC HAMBURG
-            </div> -->
-            
+    <header id="home">
+        <!-- <div id="header-background"><img src="gfx/pictures/crowd_photo_lighter.png.jpg" /></div> -->
+        <div class="container">            
             <div id="logo">
                 <div id="main_logo">
                     <!-- <img src="../gfx/bka_logo_asset_mobile.png"  id="main_img"/> -->
@@ -50,100 +52,150 @@
                 </div>
             </div>
             <div class="underline">
-                Welcome to Bareknuckle Altona
-            </div>
-            <div class="intro__text">
-                <h2>Hamburgs Fighting Game Events.</h2>
+                Hamburgs Fighting Game Events
             </div>
         </div>
     </header>
 
     <main>
-        <div class="container_video_wrapper">
-            <div class="video_wrapper">
-                <iframe class="youtube"  src="https://www.youtube.com/embed/6skAt2cWQkA"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="intro_video">
+            <div class="container_video_wrapper">
+                <div class="video_wrapper">
+                    <iframe class="youtube"  src="https://www.youtube.com/embed/6skAt2cWQkA"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-        <div class="container">
-                      
-            <section id="weekly">
-                <div class="section__header">    
-                    <h1>Weekly Local</h1>
-                    <h2>*** Wöchentliches FGC Treffen ***</h2>
-                </div>
-                
-                <div class="section__content">
-                    <img src="gfx/pictures/IMG_7748.jpg" alt="weekly_foto"/>
-                    <p>
-                Jeden Dienstag ist offline Treffen der FGC Hamburg.
-                Es werden die meisten aktuellen Fighting Games und einige Klassiker gespielt.
-                Spieler aller Skilllevels sind willkommen, bitte eigenen PS4 Controller mitbringen.
-                    </p>
-                <p>
-                    Jeden Dienstag <span class="strong1">Beginn:</span> 18:00 Uhr<br>
-                    <span class="strong1">Adresse:</span> Kulturladen Hamm, Sievekingdamm 3.<br>
-                    <span class="strong1">Stream:</span> <a href="https://twitch.tv/bareknucklealtona" target="_blank">twitch.tv/bareknucklealtona</a><br>
-                </p>
-                    <div class="map_wrapper">
-                        <iframe class="adress_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.0617368153717!2d10.041070715941375!3d53.55666538002363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18ebcffd126a1%3A0x4fa9ed18dfb156bf!2sSievekingdamm%203%2C%2020535%20Hamburg!5e0!3m2!1sde!2sde!4v1593958707733!5m2!1sde!2sde"   style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        
+            
+        <div class="weekly" id="weekly">
+            <h1>Weekly Local</h1>
+            <p>Jeden Dienstag versammeln sich Freunde von Fighting Games in Hamburg. Es werden sowohl die meisten aktuellen als auch einige legacy Titel gespielt. Eine Liste der aktuell am meisten vertretenen Spiele ist:
+            Dragon Ball Fighter Z, Tekken 7, Street Fighter 5, Guilty Gear Revelator 2, Mortal Kombat 11, BlazBlue Central Fiction, King of Fighters, Ultimate Marvel vs Capcom 3, Super Street Fighter 2 Turbo, Garou: Mark of the Wolves und mehr.
+            <br><br>
+            Für Fragen kontaktiert uns einfach auf unseren Social Media Plattformen.
+            <br><br>
+            Aufgrund der aktuellen Corona Situation ist die Teilnahme momentan eingeschränkt und nur nach direkter Anmeldung über den Hamburg FGC Discord möglich.</p>
+
+            <div class="infs">
+                <div class="infocard">
+                    <div>
+                        <img src="gfx/icons/iconfinder_access-time_326483.png" alt="time"/>
+                        <p>Dienstags 18:00 Uhr</p>
                     </div>
                 </div>
-                <div class="section__content section-strong">
-                    <h2>!!! Achtung !!!</h2>Aufgrund der aktuellen Corona Situation ist die Teilnahme am Local nur nach direkter Anmeldung über den FGCHamburg Discord (im thread "#weekly-monthly-sessions") möglich.<br>
-                    FGCHamburg Discord:   <a href="https://discord.gg/739PcJ2" target="_blank">https://discord.gg/739PcJ2</a>
+                
+                <div class="infocard">
+                    <a href="https://goo.gl/maps/M7owZy5UFAnK7zaf7" target="_blank">
+                        <img src="gfx/icons/iconfinder_94_171453.png" alt="place" />
+                        <p>Kulturladen Hamm<br>
+                            Sievekingsdamm 3</p>
+                    </a>
                 </div>
 
-            </section>
-            <section id="event">
-                <div class="section__header">   
-                
-                    <h1>BKA 2020</h1>
-                    <h2>*** Hamburgs FGC Event ***</h2>
+                <div class="infocard">
+                    <a href="https://twitch.tv/bareknucklealtona" target="_blank">
+                        <img src="gfx/icons/iconfinder_twitch_1608704.png" alt="streamchannel" />
+                        <p>twitch.tv/bareknucklealtona</p>
+                    </a>
                 </div>
-                <div class="section__content">
-                    <p>
-                        Aufgrund der Corona Situation liegen grössere Events momentan auf unbestimmte Zeit auf Eis.<br>
-                        <span class="strong1">Passt auf euch und eure Mitmenschen auf und bleibt gesund!</span>
-                    </p>
-                </div>
-            </section>
-          
+            </div>
         </div>
+
+        <div class="event" id="event">
+            <!-- <img class="section__illustration" src="gfx/pictures/bareknuckle-altona-3_105.jpg" /> -->
+            <h1>Events</h1>
+            <div class="img-container">
+                <img src="gfx/Asset27.png"   alt="Logo BKA"/>
+            </div>
+            <p>
+                Aufgrund der momentan anhaltenden Covid-19 Situation liegen grössere Events momentan auf unbestimmte Zeit auf Eis.<br>
+                Passt auf euch und eure Mitmenschen auf und bleibt gesund!
+            </p>
+            <h2>
+                Highlights vergangener Events
+            </h2>
+            <div class="videos_area">
+                
+                <div class="container_video_wrapper">
+                    <div class="video_wrapper">
+                        <iframe class="youtube"  src="https://www.youtube.com/embed/Zs8MoDQKCoc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="container_video_wrapper">
+                    <div class="video_wrapper">
+                        <iframe class="youtube" src="https://www.youtube.com/embed/nQnCeLGW-Z0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="container_video_wrapper">
+                    <div class="video_wrapper">
+                        <iframe class="youtube"  src="https://www.youtube.com/embed/uRlOr-3DVmQ"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="container_video_wrapper">
+                    <div class="video_wrapper">
+                        <iframe class="youtube"  src="https://www.youtube.com/embed/-tO1epUeOBc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+       
     </main>  
 
-    <footer>
-        <img id="footer_logo" src="gfx/bka_logo_asset_mobile.png" alt="footer logo" />
+    <footer id="footer">
+        <img id="footer_logo" src="gfx/Asset27.png" alt="footer logo" />
         <nav id="contact" class="msm_nav">
             <ul>
-                <li><a class="icon-twitter msm-nav-icon" href="#"><img src="gfx/icons/twitter.svg" alt="Twitter" /></a></li>
-                <li><a class="icon-twitch msm-nav-icon" href="#"><img src="gfx/icons/twitch.svg" alt="Twitch" /></a></li>
-                <li><a class="icon-discord msm-nav-icon" href="#"><img src="gfx/icons/discord.svg" alt="Discord" /></a></li>
-                <li><a class="icon-youtube msm-nav-icon" href="#"><img src="gfx/icons/youtube.svg" alt="Youtube" /></a></li>
-                <li><a class="icon-facebook msm-nav-icon" href="#"><img src="gfx/icons/facebook.svg" alt="Facebook" /></a></li>
+                <li><a class="icon-twitter msm-nav-icon" href="https://twitter.com/FGC_Hamburg" target="_blank"><img src="gfx/icons/twitter.svg" alt="Twitter" /></a></li>
+                <li><a class="icon-twitch msm-nav-icon" href="https://www.twitch.tv/bareknucklealtona"><img src="gfx/icons/twitch.svg" alt="Twitch" /></a></li>
+                <li><a class="icon-discord msm-nav-icon" href="https://discord.gg/eaJM96E" target="_blank"><img src="gfx/icons/discord.svg" alt="Discord" /></a></li>
+                <li><a class="icon-youtube msm-nav-icon" href="https://www.youtube.com/channel/UC3MoaRY-cf-AF7cpqyZGa6g" target="_blank"><img src="gfx/icons/youtube.svg" alt="Youtube" /></a></li>
+                <li><a class="icon-facebook msm-nav-icon" href="https://www.facebook.com/BareKnuckleAltona" target="_blank"><img src="gfx/icons/facebook.svg" alt="Facebook" /></a></li>
             </ul>
         </nav>
-        <p class="impressum">Impressum</p>
+        <!-- <p class="impressum">Impressum</p> -->
     </footer>
 
  
     <script>
         const burger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.NavLinks');
-        burger.addEventListener('click', ()=>{
+        const navLinks = document.querySelector('.navLinks');
+        burger.addEventListener('click', toggleNavbar);
+        
+        const navLink = document.querySelectorAll('.navLink');
+
+        var i;
+        for(i = 0; i < navLink.length; i++){
+            navLink[i].addEventListener('click', toggleNavbar);
+            
+        }
+
+        function toggleNavbar(){
             navLinks.classList.toggle('open');
             burger.classList.toggle('open');
             
-        });
+        }
     </script>
 
     <script>
-        // put debug script in here
-        // const debug = document.getElementById('debug');
-        // const logo = document.getElementById('main_logo');
-        // window.onresize = ()=>{
-        //     debug.textContent = logo.offsetWidth;
-        // };
-        
+        // prevents the transitions of element-structures on window resize
+        stopResponsiveTransition();
+        function stopResponsiveTransition() {
+            const navLinks = document.querySelector('.navLinks').classList;
+            let timer = null;
+            window.addEventListener('resize', function () {
+                if (timer){
+                    clearTimeout(timer);
+                    timer = null;
+                }else {
+                    navLinks.add('stop-transition');
+                }
+                timer = setTimeout(() => {
+                    navLinks.remove('stop-transition');
+                    timer = null;
+                }, 100);
+            });
+        }
     </script>
 </body>
 </html>

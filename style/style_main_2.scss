@@ -199,14 +199,9 @@ h1{
 }
 .weekly{
     @extend .event;
-    // background-image: url("../gfx/pictures/weekly_dark_2.jpg");
-    // background-repeat: no-repeat;  
-    // background-position: center;
     background-image: none;
     background-size: 2020px;
     background-color: bkaColor(background_secondary);
-    // background-position-x: center;
-    // background-position-y: -70px;
 }
 
 .infs{
@@ -420,65 +415,3 @@ footer{
 .stop-transition{
     transition: none !important;
 }
-
-
-
-
-// main{
-//     //???
-//     section:nth-child(1){
-//         margin-top: 50px;
-//     }
-//     section{
-//         // max-width: 1000px; 
-//          margin: 0 auto 100px;
-       
-//         //border: 2px solid bkaColor(background_secondary);
-//         .section__header{
-//             background-color: bkaColor(background_primary);
-//             color: bkaColor(font);
-            
-//             border-top: 20px solid bkaColor(background_dark);
-//             border-bottom: 20px solid bkaColor(background_dark);
-//             border-radius: 1px;
-//             text-align: center;
-            
-//             margin-bottom: 20px;
-
-//             h1{
-//                 font-weight: 900;
-//                 font-size: 4.5rem;
-//                 margin-bottom: 5px;
-//             }
-//             h2{
-//                 font-weight: 900;
-//                 font-size: 2.8rem;
-                
-//             }
-//         }
-//         .section__content{
-//             font-weight: 400;
-//             font-size: 1.6rem;
-//             text-align: center;
-
-//             padding: 5px;
-
-//             p{
-//                 margin: 10px auto 10px;
-//             }
-//             img{
-               
-//                 max-width: 80%;
-//                 display: block;
-//                 margin: 0px auto  10px;
-//             }
-//         }
-
-//         .section-strong{
-//             h2{
-//                 color: #FF4516;
-//             }
-//             border: 2px solid #FF4516;
-//         }
-//     }    
-// }
